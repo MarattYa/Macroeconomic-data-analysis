@@ -3,11 +3,18 @@
 CLI утилита для построения отчётов по макроэкономическим данным.
 
 ## Запуск
-
-python src/main.py --files data.csv --report average-gdp
-
+```
+python src/main.py --files data/economic1.csv --report average-gdp
+```
 ## Добавление нового отчёта
 
 1. Создать файл в `src/reports`
 2. Унаследоваться от `BaseReport`
 3. Зарегистрировать в `reports/__init__.py`
+
+## Тесты и покрытие
+
+Запуск всех тестов и проверка покрытия:
+```
+pytest --cov=src --cov-report=term-missing
+```
